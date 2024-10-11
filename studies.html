@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Studies</title>
+
+    <!-- Link to your custom CSS and chessboard styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+</head>
+<body>
+    <header>
+        <h1>Chess Studies</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="training.html">Training</a> |
+            <a href="studies.html">Studies</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Grid layout for board and lists -->
+        <div class="chess-container">
+            <section id="chess-section">
+                <h2>Chess Board</h2>
+                <div id="board-container">
+                    <!-- Flip board button -->
+                    <button id="flip-board">Flip Board</button>
+
+                    <div id="board" style="width: 500px;"></div>
+                    
+                    <!-- Button container for alignment -->
+                    <div id="button-container">
+                        <button id="first-move">First Move</button>
+                        <button id="prev-move">Previous Move</button>
+                        <button id="next-move">Next Move</button>
+                        <button id="last-move">Last Move</button>
+                    </div>
+
+                    <!-- New buttons for starting and stopping analysis -->
+                    <div id="analysis-buttons">
+                        <button id="start-analysis">Start Analysis</button>
+                        <button id="stop-analysis">Stop Analysis</button>
+                    </div>
+
+                    <!-- Stockfish Analysis Output -->
+                    <div id="stockfish-analysis" style="margin-top: 20px;">
+                        <h3>Stockfish Analysis</h3>
+                        <div id="stockfish-output">Waiting for Stockfish analysis...</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="details-section">
+                <div id="game-list-section">
+                    <h3>Game List Navigation</h3>
+                    <div id="game-navigation">
+                        <button id="prev-game">Previous Game</button>
+                        <button id="next-game">Next Game</button>
+                    </div>
+                    <div id="game-list" class="scrollable">
+                        <!-- The list of games will be displayed here -->
+                    </div>
+                </div>
+
+                <div id="game-details-section">
+                    <h3>Game Details</h3>
+                    <div id="game-details" class="details-box">
+                        <!-- Game details like players, result, and date will show here -->
+                    </div>
+                </div>
+
+                <div id="move-list-section">
+                    <h3>Move List</h3>
+                    <div id="move-list" class="scrollable">
+                        <!-- The list of moves will be displayed here -->
+                    </div>
+                </div>
+
+                <!-- PGN and FEN Upload Section (moved lower) -->
+                <div id="pgn-section">
+                    <h3>PGN and FEN Uploads</h3>
+                    <input type="file" id="pgnFileInput" accept=".pgn"><br>
+                    <textarea id="pgnInput" placeholder="Paste PGN here" rows="3"></textarea><br>
+                    <button id="loadPgnBtn">Load PGN</button>
+
+                    <textarea id="fenInput" placeholder="Enter FEN position here" rows="2"></textarea><br>
+                    <button id="loadFenBtn">Load FEN</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chess Studies</p>
+    </footer>
+
+    <!-- Load local versions of jQuery, chessboard.js, chess.js, Stockfish.js, and your custom scripts -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/chessboard-1.0.0.min.js"></script>
+    <script src="js/chess.min.js"></script>
+    <script src="js/stockfish.js"></script> <!-- Include Stockfish.js -->
+    <script src="js/scripts.js"></script> <!-- Your custom scripts -->
+</body>
+</html>

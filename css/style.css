@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #4CAF50;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.chess-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#chess-section {
+    text-align: center;
+}
+
+/* Aligning the buttons with the board */
+#board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#button-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.scrollable {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.details-box {
+    min-height: 80px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+#board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Style for the flip button on top-left */
+#flip-board {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+#flip-board:hover {
+    background-color: #45a049;
+}
+#navigation-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#navigation-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#stockfish-analysis {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+}
